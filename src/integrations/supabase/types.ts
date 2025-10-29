@@ -14,7 +14,84 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          created_at: string | null
+          email: string | null
+          full_name: string | null
+          id: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          email?: string | null
+          full_name?: string | null
+          id: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          email?: string | null
+          full_name?: string | null
+          id?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      resumes: {
+        Row: {
+          created_at: string | null
+          education: string | null
+          experience_years: number | null
+          file_name: string
+          file_url: string | null
+          id: string
+          is_shortlisted: boolean | null
+          matched_skills: string[] | null
+          missing_skills: string[] | null
+          overall_score: number | null
+          score_breakdown: Json | null
+          status: string | null
+          updated_at: string | null
+          upload_date: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          education?: string | null
+          experience_years?: number | null
+          file_name: string
+          file_url?: string | null
+          id?: string
+          is_shortlisted?: boolean | null
+          matched_skills?: string[] | null
+          missing_skills?: string[] | null
+          overall_score?: number | null
+          score_breakdown?: Json | null
+          status?: string | null
+          updated_at?: string | null
+          upload_date?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          education?: string | null
+          experience_years?: number | null
+          file_name?: string
+          file_url?: string | null
+          id?: string
+          is_shortlisted?: boolean | null
+          matched_skills?: string[] | null
+          missing_skills?: string[] | null
+          overall_score?: number | null
+          score_breakdown?: Json | null
+          status?: string | null
+          updated_at?: string | null
+          upload_date?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
